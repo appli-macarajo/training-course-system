@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import type { Course } from "../types/course";
 
 export default function Courses() {
@@ -16,6 +17,10 @@ export default function Courses() {
       {courses.map((course) => (
         <div key={course.id}>
           <h2>{course.title}</h2>
+
+          <Link to={`/course/${course.id}`}>
+            View Details
+          </Link>
         </div>
       ))}
     </div>
